@@ -14,8 +14,13 @@
     <td><%= movie.title %></td>
     <td>
       <ul class="rating">
+        <% form_id = "movie_#{movie.id}_rating" %>
+        <%= form_for movie.ratings.last || movie.ratings.build, :html => {:id => "movie_#{movie.id}_rating", :class => "star_rating_form"} do |f| %>
+          <%= f.hidden_field :movie_id %>
+          <%= f.hidden_field :stars, :id => "#{form_id}_stars" %>
+        <% end %>
         <% (1..5).each do |i| %>
-          <li class="rating_star"></li>
+          <li class="rating_star" data-stars="<%= i %>" data-form-id="<%= form_id %>" id="<%= "#{form_id}_#{i}" %>"></li>
         <% end %>
       </ul>
     </td>
