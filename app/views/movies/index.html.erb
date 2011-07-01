@@ -6,11 +6,21 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @movies.each do |movie| %>
   <tr>
     <td><%= movie.title %></td>
+    <td>
+      <ul class="rating">
+        <li class="rating_star"></li>
+        <li class="rating_star"></li>
+        <li class="rating_star"></li>
+        <li class="rating_star"></li>
+        <li class="rating_star"></li>
+      </ul>
+    </td>
     <td><%= link_to 'Show', movie %></td>
     <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
     <td><%= link_to 'Destroy', movie, :confirm => 'Are you sure?', :method => :delete %></td>

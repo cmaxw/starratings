@@ -73,3 +73,19 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+.rating {
+  margin: auto 0;
+}
+
+.rating_star {
+  background: url('/images/star.gif') 0 0;
+  width: 16px;
+  height: 16px;
+  display: block;
+  float: left;
+}
+
+.on {
+  background-position: 0 16px;
+}
