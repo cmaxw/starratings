@@ -14,11 +14,9 @@
     <td><%= movie.title %></td>
     <td>
       <ul class="rating">
-        <li class="rating_star"></li>
-        <li class="rating_star"></li>
-        <li class="rating_star"></li>
-        <li class="rating_star"></li>
-        <li class="rating_star"></li>
+        <% (1..5).each do |i| %>
+          <li class="rating_star"></li>
+        <% end %>
       </ul>
     </td>
     <td><%= link_to 'Show', movie %></td>
